@@ -524,7 +524,7 @@ export default function Home() {
                           onClick={(e) => {
                             e.preventDefault()
                             e.stopPropagation()
-                            downloadImage(typeof resultImage === 'string' ? resultImage : resultImage.url || resultImage, 'stud-io-model.jpg')
+                            downloadImage(resultImage, 'stud-io-model.jpg')
                           }}
                           style={{ pointerEvents: 'auto' }}
                           className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 hover:scale-105 transition-all duration-200 relative z-10"

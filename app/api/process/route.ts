@@ -29,11 +29,7 @@ export async function POST(request: NextRequest) {
           }
         })
 
-        const imageUrl = result.data?.image?.url || 
-                        result.data?.images?.[0]?.url || 
-                        result.data?.output?.url ||
-                        result.image?.url ||
-                        result.images?.[0]?.url
+        const imageUrl = result.data?.images?.[0]?.url
 
         if (!imageUrl) {
           throw new Error(`No image URL found for ${angle} angle`)
